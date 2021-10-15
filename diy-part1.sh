@@ -15,7 +15,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-
+git clone https://github.com/fw876/helloworld.git --depth=1 ./tmp/helloworld
 rm -rf ./package/lean/luci-app-ssr-plus && cp -rf ./tmp/helloworld/luci-app-ssr-plus ./package/lean/
 rm -rf ./package/lean/tcping && cp -rf ./tmp/helloworld/tcping ./package/lean/
 rm -rf ./package/lean/naiveproxy && cp -rf ./tmp/helloworld/naiveproxy ./package/lean/
